@@ -74,3 +74,14 @@ On passe ensuite à l’ajout de clairctl qui permet d'analyser des images Docke
 wget https://github.com/jgsqware/clairctl/releases/download/v1.2.8/clairctl-linux-amd64 -O clairctl
 
 
+Point de blocage:
+
+Mise en place multi-container:
+
+Clair nécessite un environnement avec une base PostgreSQL : cela demande une configuration Docker Compose non triviale.
+
+Défis pour faire fonctionner Clair en tant que client REST et gérer le lien avec PostgreSQL (variable d’environnement CLAIR_DATABASE_URL difficile à configurer).
+
+Scan d’images:
+
+Lancer un scan implique de bien comprendre le mécanisme de “Indexer” et “Matcher”, ce qui a été flou au départ.

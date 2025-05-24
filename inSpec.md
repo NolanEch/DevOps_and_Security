@@ -45,3 +45,18 @@ Pour lancer les tests depuis le dossier de ton profil, utilise :
 docker run --rm -v "${PWD}:/share" custom-inspec exec /share
 
 Cela exécutera les tests dans le profil et donnera un rapport de conformité.
+
+
+Point de blocage:
+
+Création d’un profil:
+
+La commande inspec init profile fonctionne bien, mais la structure générée n’est pas évidente à adapter sans expérience en Ruby.
+
+Les fichiers controls/example.rb sont verbeux et la syntaxe des tests n’est pas intuitive sans exemples précis.
+
+Exécution des tests:
+
+Exécution avec Docker : il a fallu créer une image custom de InSpec (via Dockerfile) car l’image officielle ne couvrait pas tous.
+
+Montage de volume (-v "${PWD}:/share") sensible aux erreurs.

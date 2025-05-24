@@ -55,3 +55,18 @@ Ensuite si l’on souhaite le lire par la suite la commande sera la suivante:
 
 docker exec -it vault vault kv get secret/mysql
 
+
+
+Point de blocage:
+
+Installation et lancement:
+
+Vault nécessite une phase d’initialisation et de déverrouillage (unseal) assez déroutante pour un premier usage.
+
+Comprendre le fonctionnement des “keys” d’unseal et du root token a demandé plusieurs essais.
+
+Utilisation avec Docker:
+
+Complexité pour exposer Vault en mode dev dans un container Docker et y accéder depuis l’extérieur.
+
+Problèmes de ports ou de configuration réseau liés à l’accessibilité de l’API Vault depuis d'autres services.
